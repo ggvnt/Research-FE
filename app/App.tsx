@@ -1,4 +1,7 @@
+import DetectionResults from "@/components/DetectionResults";
 import Home from "@/components/Home";
+import PineappleDetection from "@/components/PineappleDetection";
+import PlantTracker from "@/components/PlantTracker";
 import Profile from "@/components/Profile";
 import SignIn from "@/components/SignIn";
 import SignUp from "@/components/SignUp";
@@ -38,6 +41,12 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen
+          name="PineappleDetection"
+          component={PineappleDetection}
+        />
+        <Stack.Screen name="DetectionResults" component={DetectionResults} />
+        <Stack.Screen name="PlantTracker" component={PlantTracker} />
       </Stack.Navigator>
     </NavigationContainer>
   );

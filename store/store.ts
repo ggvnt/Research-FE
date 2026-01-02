@@ -1,14 +1,17 @@
 // store/store.ts
 import { configureStore } from '@reduxjs/toolkit';
-import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import authReducer from './slices/authSlice';
+import detectionReducer from './slices/detectionSlice';
 import itemReducer from './slices/itemsSlice';
+import plantReducer from './slices/plantSlice';
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     items: itemReducer,
-    // Add other reducers here as your app grows
+    plants: plantReducer,
+    detections: detectionReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

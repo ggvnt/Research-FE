@@ -29,10 +29,7 @@ const Home: React.FC = () => {
   const displayName = user?.name || user?.email || "Farmer";
 
   const handleStartDetection = () => {
-    Alert.alert(
-      "Start Detection",
-      "Here you will open the camera and run the AI model.\n\nYou can link this to your detection screen later."
-    );
+    navigation.navigate("PineappleDetection");
   };
 
   const handleViewAlerts = () => {
